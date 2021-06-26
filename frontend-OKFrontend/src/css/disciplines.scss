@@ -1,0 +1,12 @@
+@import "src/css/consts";
+@import "src/index";
+
+.discipl-params-select-row {
+  display: flex;
+  // justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bd-example-row .row+.row {
+  margin-top: 1rem;
+}

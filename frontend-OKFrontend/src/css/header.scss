@@ -1,0 +1,75 @@
+@import "src/index";
+@import "src/css/consts";
+
+.header {
+  @include app-fonts;
+  height: $headerHeight;
+  background-color: $headerColor;
+  // margin: 0 0 20px 0;
+  ul {
+    list-style: none;
+    line-height: 20px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  padding-left: 0;
+  margin-bottom: 0;
+
+  a, a:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  a{
+    opacity: 0.85;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  padding: .5rem 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+
+  margin-top: 2px;
+  background-color: $headerColor;
+  width: 300px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+
+  li{
+    margin: 10px;
+  }
+
+}
+
+
+.menu>li:hover> .submenu {
+  display: block;
+  border-radius: 0;
+}
+// .submenu:hover { display: block; z-index: 1000; }

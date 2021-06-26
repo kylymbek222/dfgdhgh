@@ -1,0 +1,29 @@
+$headerHeight: 45px;
+$headerColor: #007bff;
+//$headerColor: #0062AD;
+$buttonColor: #0062AD;
+
+@mixin table-style {
+  .table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    overflow: auto;
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+}
+
+.Table {
+  @include table-style
+}
